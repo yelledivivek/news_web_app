@@ -1,39 +1,33 @@
-import React, { useEffect } from 'react'
-import MainSection from './MainSection'
-import NewsPost from './NewsPost'
-import TopStories from './TopStories'
+import React, { useEffect } from "react";
+import NewsPost from "./NewsPost";
+import TopStories from "./TopStories";
 
 function FirstHero() {
-  
-
-  return ( 
-    <div>
-      <div className='container mx-auto m-2'>
-  <div className='grid grid-flow-row grid-rows-1 sm:grid-cols-3 md:grid-cols-4 gap-3'>
-    <div className='bg-yellow-400 sm:col-span-2 md:col-span-2 grid grid-cols-4 grid-rows-3 gap-2'>
-            <div className='relative col-span-4 row-span-2 bg-gray-400 h-80'>
-              <TopStories valu = {1} />
-      </div>
-      <div className='col-span-2 h-40'>
-              <TopStories valu = {2} />
-      </div>
-            <div className=''>
-            <TopStories valu = {3}/>
-      </div>
-    </div>
-    <div className='bg-yellow-400 grid grid-cols-4 sm:grid-rows-3 gap-2'>
-      <div className='col-span-2 sm:col-span-full'>a</div>
-      <div className='col-span-2 sm:col-span-full '>b</div>
-      <div className='col-span-full bg-green-400'>c</div>
-    </div>
-          <div className='sm:col-span-3 md:col-span-1 rounded-lg shadow-2xl'>
+  return (
+    <>
+      <div className="container mx-auto m-2">
+        <div className="grid sm:grid-cols-3 md:grid-cols-4 gap-3 grid-flow-row">
+          <TopStories />
+          
+          <div className="sm:col-span-3 md:col-span-1 overflow-auto h-3/4 sm:-mt-28 md:m-0">
             <NewsPost />
-    </div>
-  </div>     
+          </div>
+        </div>
+        {/* <h1 className="bg-black h-32 absolute md:top-3/4 sm:-bottom-96 -bottom-20 my-4">gsdyddggdfgdgfdsbuuigigcgudafgduafug</h1> */}
       </div>
-      
-    </div>
-  )
+    </>
+  );
 }
 
-export default FirstHero
+export default FirstHero;
+
+{/* <div className="container mx-auto m-2 relative">
+        <div className="grid grid-flow-row sm:grid-cols-3 md:grid-cols-4 gap-3 h-3/4 relative">
+          <TopStories />
+          
+          <div className="sm:col-span-3 md:col-span-1 h-3/4 overflow-auto sm:absolute md:relative top-3/4 md:top-0 sm:my-2 md:m-0">
+            <NewsPost />
+          </div>
+        </div>
+        <h1 className="bg-black h-32 absolute md:top-3/4 sm:-bottom-96 -bottom-20 my-4">gsdyddggdfgdgfdsbuuigigcgudafgduafug</h1>
+      </div> */}

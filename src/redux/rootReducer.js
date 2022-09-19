@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
+import loginReducer from "./auth/authReducer";
+import categorystorieReducer from "./category/categoryReducer";
 // import leatestNewsReducer from "./leatestNews/leatestNewsReducer"
-import cakeReducer from './cake/cakeReducer'
+
 import newsReducer from "./news/newsReducer";
 import newspageReducer from "./newspage/newspageReducer";
 import topstorieReducer from "./topstories/topstoriesReducer";
-import postReducer from "./user/userReducer";
+
 
 
 
@@ -12,9 +14,9 @@ const rootReducer = combineReducers({
  news: newsReducer,
  newsdetiles: newspageReducer,
  topstories: topstorieReducer,
- post: postReducer,
- cake: cakeReducer,
-
+ category: categorystorieReducer,
+ login: loginReducer,
+ 
 })
 
 export default rootReducer
